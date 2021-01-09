@@ -1,0 +1,20 @@
+﻿<h2>新增頁面</h2>
+<br />
+
+@using (Html.BeginForm("Access", "Data", new { AccessType = "Create" }, FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="Name">名稱</label>
+        <input class="form-control" id="Name" name="Name">
+    </div>
+    <div class="form-group">
+        <label for="Name">性別</label>
+        <br />
+        <label class="radio-inline"><input type="radio" name="Gender" value="M" checked>男</label>
+        <label class="radio-inline"><input type="radio" name="Gender" value="F">女</label>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">送出</button>
+        <a class="btn btn-danger" href="@Url.Action("Index", "Data")">取消</a>
+    </div>
+}
